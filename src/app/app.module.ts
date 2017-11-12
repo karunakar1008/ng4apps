@@ -9,7 +9,7 @@ import { HeroService } from './services/hero.service';
 import { MessagesComponent } from './components/messages/messages.component';
 import { MessageService } from './services/message.service';
 import { AppRoutingModule } from './/app-routing.module';
-
+import { RouterModule, Routes } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +20,7 @@ import { AppRoutingModule } from './/app-routing.module';
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule,
     AppRoutingModule
   ],
   providers: [HeroService, MessageService],
