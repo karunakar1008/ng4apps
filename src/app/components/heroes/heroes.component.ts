@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Hero } from '../.././models/hero';
 import { HeroService } from '../../services/hero.service';
-import { Observable } from 'rxjs/Observable'; // npm install rxjs
-import { of } from 'rxjs/observable/of';
+
 @Component({
   selector: 'app-horoes',
   templateUrl: './heroes.component.html',
@@ -11,7 +10,7 @@ import { of } from 'rxjs/observable/of';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes: Observable<Hero[]>;
+  heroes: Hero[];
   selectedHero: Hero;
 
   constructor(private heroService: HeroService) { }
@@ -25,6 +24,7 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes()
+    .subscribe(heroes => this.heroes = heroes);
   }
 }
