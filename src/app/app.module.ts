@@ -10,12 +10,14 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { MessageService } from './services/message.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
