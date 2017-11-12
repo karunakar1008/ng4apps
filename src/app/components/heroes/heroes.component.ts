@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Hero } from '../.././models/hero';
+
+import { HEROES } from '../../services/mock-heroes.service';
 @Component({
   selector: 'app-horoes',
   templateUrl: './heroes.component.html',
@@ -10,11 +12,11 @@ export class HeroesComponent implements OnInit {
 
   constructor() { }
 
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
-
+  // hero: Hero = {
+  //   id: 1,
+  //   name: 'Windstorm'
+  // };
+  heroes = HEROES;
   ngOnInit() {
   }
 
